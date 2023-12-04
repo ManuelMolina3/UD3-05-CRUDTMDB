@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageMovieComponent } from './ui/page-movie/page-movie.component';
 import { LsitMovieComponent } from './components/lsit-movie/lsit-movie.component';
 import { ApprovedComponent } from './components/approved/approved.component';
+import { ListMoviePersonalComponent } from './components/list-movie-personal/list-movie-personal.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ApprovedComponent } from './components/approved/approved.component';
     NavbarComponent,
     PageMovieComponent,
     LsitMovieComponent,
-    ApprovedComponent
+    ApprovedComponent,
+    ListMoviePersonalComponent
   ],
   imports: [
     BrowserModule,

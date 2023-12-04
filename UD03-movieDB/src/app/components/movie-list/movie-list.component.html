@@ -1,0 +1,17 @@
+<nav class="d-flex justify-content-center mt-2">
+  <ngb-pagination
+    [collectionSize]="NumeroDePaginas"
+    [(page)]="paginaActual"
+    [maxSize]="3"
+    [pageSize]="20"
+    [rotate]="true"
+    (pageChange)="paginacion()"
+  ></ngb-pagination>
+</nav>
+<div class="row m-auto">
+  <app-movie-item
+    class="col-3 mt-4"
+    *ngFor="let movie of movieList"
+    [movie]="movie"
+  ></app-movie-item>
+</div>

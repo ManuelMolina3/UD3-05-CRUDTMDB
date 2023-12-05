@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movie } from '../../models/movie.interface';
 
 @Component({
@@ -8,6 +8,12 @@ import { Movie } from '../../models/movie.interface';
 })
 export class MovieItemComponent {
   @Input() movie!: Movie;
+  @Input() movieIndex!: number;
+  @Output() toEmit = new EventEmitter<number>();
+
+  openModal() {
+    this.toEmit.emit(this.movieIndex);
+  }
 
   getImgUrl(): string {
     return `https://www.themoviedb.org/t/p/w220_and_h330_face/${this.movie.poster_path}`;

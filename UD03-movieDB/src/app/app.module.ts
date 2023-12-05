@@ -8,9 +8,12 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageMovieComponent } from './ui/page-movie/page-movie.component';
-import { LsitMovieComponent } from './components/lsit-movie/lsit-movie.component';
 import { ApprovedComponent } from './components/approved/approved.component';
 import { ListMoviePersonalComponent } from './components/list-movie-personal/list-movie-personal.component';
+import { PageListComponent } from './ui/page-list/page-list.component';
+import { PageUserComponent } from './ui/page-user/page-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ListMovieListComponent } from './components/list-movie-list/list-movie-list.component';
 
 @NgModule({
   declarations: [
@@ -19,16 +22,14 @@ import { ListMoviePersonalComponent } from './components/list-movie-personal/lis
     MovieListComponent,
     NavbarComponent,
     PageMovieComponent,
-    LsitMovieComponent,
     ApprovedComponent,
-    ListMoviePersonalComponent
+    ListMoviePersonalComponent,
+    PageListComponent,
+    PageUserComponent,
+    ListMovieListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
